@@ -1,9 +1,29 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
 import { ReactComponent as Dove } from '@web/public/images/dove.svg';
 
+import { loginGuest } from '@web/services/auth';
+import { useSetRecoilState } from 'recoil';
+import { authGuestState } from '@web/utils/states/auth';
+
 export const SignInView: React.FC = () => {
+  const setGuestAuth = useSetRecoilState(authGuestState);
+  const router = useRouter();
+
+  const handleLoginGuest = async () => {
+    try {
+      const res = await loginGuest();
+
+      setGuestAuth(res);
+      router.push('/');
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
       <Box height="40vh" justifyItems={'center'} className="sign-in-head">
@@ -30,13 +50,14 @@ export const SignInView: React.FC = () => {
             dành cho các bạn trẻ.
           </Typography>
           <Box mt="140px">
-            <Button
+            <LoadingButton
               variant="contained"
               className="btn btn-primary"
               size="large"
+              onClick={handleLoginGuest}
             >
               Tiếp tục
-            </Button>
+            </LoadingButton>
           </Box>
         </Box>
       </Box>

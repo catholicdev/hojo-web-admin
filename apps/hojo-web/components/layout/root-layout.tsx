@@ -9,15 +9,15 @@ export const RootLayout: FC<RootLayoutProps> = ({
   children,
 }: RootLayoutProps) => {
   return (
-    <main>
-      <Protected>
+    <Protected>
+      <main>
         <div className="wrapper">
           <div className="container">
             {children}
             <ToastContainer />
           </div>
         </div>
-      </Protected>
-    </main>
+      </main>
+    </Protected>
   );
 };

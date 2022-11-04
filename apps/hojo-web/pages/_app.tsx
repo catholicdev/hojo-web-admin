@@ -17,7 +17,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        <Container>
+        <Container component="main" maxWidth="xs">
           <CssBaseline />
           <RootLayout>
             <Component {...pageProps} />

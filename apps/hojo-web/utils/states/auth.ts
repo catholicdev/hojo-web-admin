@@ -1,6 +1,6 @@
-import { atom } from "recoil";
+import { atom } from 'recoil';
 
-export const authState = atom<IUser>({
-  key: "authState",
+export const authGuestState = atom<IGuest>({
+  key: 'authGuestState',
   default: undefined,
 });
