@@ -1,16 +1,28 @@
+import { theme } from '@theme';
+import { RecoilRoot } from 'recoil';
+
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+
+import { ThemeProvider } from '@mui/material';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import { RootLayout } from '@web/components/layout';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Welcome to hojo-web!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <ThemeProvider theme={theme}>
+        <RecoilRoot>
+          <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <RootLayout>
+              <Component {...pageProps} />
+            </RootLayout>
+          </Container>
+        </RecoilRoot>
+      </ThemeProvider>
     </>
   );
 }
