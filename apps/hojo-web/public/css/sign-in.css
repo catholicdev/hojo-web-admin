@@ -1,0 +1,40 @@
+.sign-in-title {
+    font-weight: 800;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 67px;
+}
+
+.sign-in-description {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 73px;
+}
+
+.btn-primary {
+    border-radius: 40px;
+    width: 100%;
+    background: linear-gradient(90deg, #0762C8 0%, #00C2E4 100%);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    height: 56px;
+    padding: 20px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sign-in-head {
+    position: relative;
+    width: 100%;
+}
+
+.sign-in-content {
+    background-color: #FFC107;
+}

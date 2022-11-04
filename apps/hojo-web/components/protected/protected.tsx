@@ -30,4 +30,5 @@ export const Protected: FC<ProtectedProps> = ({ children }) => {
   }, [authorized, router]);
 
   return authorized ? children : <LoadingScreen />;
+  // return children;
 };

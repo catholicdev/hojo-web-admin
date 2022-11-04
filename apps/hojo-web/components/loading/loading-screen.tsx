@@ -5,12 +5,20 @@ import { ReactComponent as Logo } from '@web/public/images/logo.svg';
 
 export const LoadingScreen = () => {
   return (
-    <Box
-      sx={{ display: 'flex' }}
-      flexDirection="column"
-      justifyContent="center"
-    >
-      <Logo />
-    </Box>
+    <div className="wrapper">
+      <div className="container">
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          height="100vh"
+          justifyContent="center"
+        >
+          <div style={{ flex: 1 }} className="logo">
+            <Logo />
+          </div>
+        </Box>
+      </div>
+    </div>
   );
 };
