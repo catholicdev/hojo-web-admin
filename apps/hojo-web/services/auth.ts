@@ -7,7 +7,7 @@ import { request } from './axios';
 
 export const loginGuest = async (): Promise<IGuest> => {
   try {
-    const { data: user } = await request<IGuest, GetTokenArgs>(
+    const { data: user } = await request<IGuest, GetGuestTokenArgs>(
       '/guest/app/login',
       {
         method: 'POST',
@@ -20,9 +20,41 @@ export const loginGuest = async (): Promise<IGuest> => {
         loginTimeStamp: Date.now(),
         accessToken: user.token,
       });
+
+      mutateStorage.persistGuest({
+        userId: user.userId,
+        appId: user.appId,
+      });
     }
 
     return user;
+  } catch (err) {
+    throw handleAPIError(err);
+  }
+};
+
+export const reloginGuest = async ({
+  userId,
+  appId,
+}: GetGuestTokenArgs): Promise<IGuestToken> => {
+  try {
+    const { data } = await request<IGuestToken, GetGuestTokenArgs>(
+      '/guest/app/relogin',
+      {
+        method: 'POST',
+        data: { userId, appId },
+      }
+    );
+
+    if (data) {
+      mutateStorage.persist({
+        status: STATUS.SUCCESS,
+        loginTimeStamp: Date.now(),
+        accessToken: data.token,
+      });
+    }
+
+    return data;
   } catch (err) {
     throw handleAPIError(err);
   }

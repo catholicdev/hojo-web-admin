@@ -3,3 +3,8 @@ interface IStorageUser {
   accessToken: string;
   loginTimeStamp?: number;
 }
+
+interface IStorageGuest {
+  userId: string;
+  appId: string;
+}

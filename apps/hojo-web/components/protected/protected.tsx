@@ -17,7 +17,7 @@ export const Protected: FC<ProtectedProps> = ({ children }) => {
 
     if (
       !mutateStorage.accessToken ||
-      Date.now() - loginTimeStamp > 1000 * 60 * 20
+      Date.now() - loginTimeStamp > 1000 * 60 * 60
     ) {
       //TODO call sign-out
       mutateStorage.purge(); //clear storage on browser

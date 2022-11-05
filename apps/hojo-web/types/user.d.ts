@@ -20,3 +20,7 @@ interface IGuest {
   appId: string;
   userId: string;
 }
+
+interface IGuestToken {
+  token: string;
+}

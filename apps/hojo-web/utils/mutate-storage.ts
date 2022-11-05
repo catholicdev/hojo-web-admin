@@ -6,16 +6,17 @@ export const isBrowser = () => {
 
 class Storage {
   private _user: IStorageUser;
-
   private _rememberMe: boolean;
-
   private _newToken: string;
+  private _guest: IStorageGuest;
 
   constructor() {
     const persistedUser = this.decode();
+    const persistedGuest = this.decodeGuest();
 
     try {
       this._user = JSON.parse(persistedUser);
+      this._guest = JSON.parse(persistedGuest);
     } catch (e) {
       this._user = null;
     } finally {
@@ -33,8 +34,19 @@ class Storage {
       Storage.reverse(localStorage.getItem(STORAGE_KEYS.USER_DATA) ?? '')
     );
   }
+
+  private decodeGuest() {
+    return window.atob(
+      Storage.reverse(localStorage.getItem(STORAGE_KEYS.GUEST_DATA) ?? '')
+    );
+  }
+
   private encode() {
     return Storage.reverse(window.btoa(JSON.stringify(this._user)));
+  }
+
+  private guestEncode() {
+    return Storage.reverse(window.btoa(JSON.stringify(this._guest)));
   }
 
   get rememberMe() {
@@ -52,10 +64,17 @@ class Storage {
     localStorage.setItem(STORAGE_KEYS.USER_DATA, this.encode());
   }
 
+  persistGuest(value: Partial<IStorageGuest>) {
+    this._guest = { ...this._guest, ...value };
+
+    localStorage.setItem(STORAGE_KEYS.GUEST_DATA, this.guestEncode());
+  }
+
   purge() {
     this._user = null;
     localStorage.removeItem(STORAGE_KEYS.USER_DATA);
   }
+
   get accessToken() {
     if (this._user == null) return undefined;
 
@@ -79,19 +98,21 @@ class Storage {
     this.persist(this._user);
   }
 
-  get newToken() {
-    return this._newToken;
+  get guestId() {
+    if (this._guest == null) return undefined;
+    return this._guest.userId;
   }
 
-  set newToken(value) {
-    this._newToken = value;
+  get guestAppId() {
+    if (this._guest == null) return undefined;
+    return this._guest.appId;
   }
 
-  get actionConfirmation() {
-    if (this._user == null) return undefined;
+  // get actionConfirmation() {
+  //   if (this._user == null) return undefined;
 
-    return this._user.actionConfirmation;
-  }
+  //   return this._user.actionConfirmation;
+  // }
 }
 
 const mutateStorage = isBrowser() ? new Storage() : null;

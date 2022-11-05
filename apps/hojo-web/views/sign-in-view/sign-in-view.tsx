@@ -5,9 +5,10 @@ import { Box, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import { ReactComponent as Dove } from '@web/public/images/dove.svg';
 
-import { loginGuest } from '@web/services/auth';
+import { loginGuest, reloginGuest } from '@web/services/auth';
 import { useSetRecoilState } from 'recoil';
 import { authGuestState } from '@web/utils/states/auth';
+import mutateStorage from '@web/utils/mutate-storage';
 
 export const SignInView: React.FC = () => {
   const setGuestAuth = useSetRecoilState(authGuestState);
@@ -15,9 +16,20 @@ export const SignInView: React.FC = () => {
 
   const handleLoginGuest = async () => {
     try {
-      const res = await loginGuest();
+      const guestId = mutateStorage.guestId;
+      const appId = mutateStorage.guestAppId;
+      let res: any;
 
-      setGuestAuth(res);
+      console.log(guestId);
+
+      if (guestId) {
+        res = await reloginGuest({ userId: guestId, appId: appId });
+      } else {
+        res = await loginGuest();
+      }
+
+      setGuestAuth({ userId: guestId, appId: appId, ...res });
+
       router.push('/');
     } catch (err) {
       console.log(err);

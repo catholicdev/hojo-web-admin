@@ -4,6 +4,7 @@ export enum STORAGE_KEYS {
   ACCESS_TOKEN = '_@hojo/client:access-token',
   REMEMBER_ME = '_@hojo/client:remember-me',
   USER_DATA = '_@hojo/client:data',
+  GUEST_DATA = '_@hojo/guest:data',
 }
 
 export enum STATUS {
