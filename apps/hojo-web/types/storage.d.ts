@@ -2,5 +2,9 @@ interface IStorageUser {
   status: string;
   accessToken: string;
   loginTimeStamp?: number;
-  actionConfirmation: string;
+}
+
+interface IStorageGuest {
+  userId: string;
+  appId: string;
 }

@@ -1,2 +1,82 @@
 .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.homeUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 20vh;
+}
+
+.homeAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.homeWelcome {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.homeFunction {
+    width: 100%;
+    padding: 30px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.homeFunctionBox {
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.homeFunctionBox:hover{
+    /* Soft Shadow Thư mục */
+    box-shadow: 0px 24px 24px 24px rgba(211, 211, 211, 0.15);
+}
+
+.homeFunctionBoxContent {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #043B78;
+    text-align: center;
+    flex: 0 0 55%;
+}
+
+.homeFunctionBoxImage {
+    height: 100%;
+    flex: 0 0 45%;
+    background-color: #00C2E4;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

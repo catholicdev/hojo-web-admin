@@ -3,23 +3,6 @@ interface IFormSignIn {
   password: string;
   remember?: boolean;
 }
-
-interface IActionConfirmation {
-  isValid: boolean;
-  errors: [];
-  status: string;
-  action?: string;
-  via?: string;
-  actorId?: string;
-  createdBy?: string;
-  updatedBy?: string;
-  token?: string;
-  expiredAt?: string;
-  createdOn?: string;
-  updatedOn?: string;
-  id: number;
-}
-
 interface IUser {
   kind: string;
   localId: string;
@@ -30,4 +13,14 @@ interface IUser {
   refreshToken: string;
   expiresIn: string;
   actionConfirmation: IActionConfirmation;
+}
+
+interface IGuest {
+  token: string;
+  appId: string;
+  userId: string;
+}
+
+interface IGuestToken {
+  token: string;
 }
