@@ -13,7 +13,7 @@ export const DailyBibleView: React.FC = () => {
   const router = useRouter();
 
   const handleGetDailyBile = () => {
-    return true;
+    return false;
   };
 
   const handleBack = () => {
