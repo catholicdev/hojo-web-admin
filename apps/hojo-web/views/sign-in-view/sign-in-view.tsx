@@ -37,19 +37,24 @@ export const SignInView: React.FC = () => {
   };
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      className="sign-in"
+    >
       <Box height="40vh" justifyItems={'center'} className="sign-in-head">
         <Box className="logo">
           <Dove />
         </Box>
       </Box>
-      <Box width="100%">
+      <Box width="100%" className="sign-in-body">
         <Box
-          className="sign-in-content"
           display="flex"
           flexDirection="column"
           alignItems="center"
           height="60vh"
+          className="sign-in-content"
         >
           <Typography className="sign-in-title" color="primary">
             HOJO
