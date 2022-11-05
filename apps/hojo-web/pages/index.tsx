@@ -6,8 +6,15 @@ import { ReactComponent as Function1 } from '@web/public/images/function1.svg';
 import { ReactComponent as Function2 } from '@web/public/images/function2.svg';
 import { ReactComponent as Function3 } from '@web/public/images/function3.svg';
 import { ReactComponent as Function4 } from '@web/public/images/function4.svg';
+import { useRouter } from 'next/router';
 
 export function Index() {
+  const router = useRouter();
+
+  const handleClickFunction = (route) => {
+    router.push(route);
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.homeUser}>
@@ -29,7 +36,10 @@ export function Index() {
             Kinh Thánh
           </Box>
         </Box>
-        <Box className={styles.homeFunctionBox}>
+        <Box
+          className={styles.homeFunctionBox}
+          onClick={() => handleClickFunction('/daily-bible')}
+        >
           <Box className={styles.homeFunctionBoxImage}>
             <Function2 />
           </Box>

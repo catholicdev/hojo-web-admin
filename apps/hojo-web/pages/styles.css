@@ -72,6 +72,7 @@ pre {
   padding: 0;
   color: rgba(55, 65, 81, 1);
   width: 100%;
+  height: 100vh;
 }
 #welcome {
   margin-top: 2.5rem;

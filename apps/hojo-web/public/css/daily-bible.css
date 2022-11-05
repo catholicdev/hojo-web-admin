@@ -1,0 +1,47 @@
+.daily-bible {
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.daily-bible-center {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.daily-bible-center .center-cloud{
+    position: absolute;
+    top: 0;
+}
+
+.daily-bible-center .center {
+    position: absolute;
+    top: 185px;
+}
+
+.daily-bible-center .center-bible {
+    position: absolute;
+    top: 345px;
+    left: 90px;
+    cursor: pointer;
+    animation: ripple 1.2s infinite ease-in-out,
+}
+
+.daily-bible-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+@keyframes ripple {
+    0% {
+      transform: scale(.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+}
