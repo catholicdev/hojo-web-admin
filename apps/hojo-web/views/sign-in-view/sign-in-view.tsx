@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-
+import { useSetRecoilState } from 'recoil';
 import { Box, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-import { ReactComponent as Dove } from '@web/public/images/dove.svg';
 
+import { ReactComponent as Dove } from '@web/public/images/dove.svg';
 import { loginGuest, reloginGuest } from '@web/services/auth';
-import { useSetRecoilState } from 'recoil';
 import { authGuestState } from '@web/utils/states/auth';
 import mutateStorage from '@web/utils/mutate-storage';
 

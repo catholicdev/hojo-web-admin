@@ -11,8 +11,8 @@ import { RootLayout } from '@web/components/layout';
 
 /// css
 import './styles.css';
-import '../public/css/sign-in.css';
-import '../public/css/daily-bible.css';
+import '@web/public/css/sign-in.css';
+import '@web/public/css/daily-bible.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
