@@ -1,5 +1,6 @@
-import { Box, IconButton } from '@mui/material';
+import { useRouter } from 'next/router';
 import * as React from 'react';
+import { Box, IconButton } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 import { ReactComponent as BackgroundDaily } from '@web/public/images/backgrounddaily.svg';
@@ -7,7 +8,6 @@ import { ReactComponent as DailyBible } from '@web/public/images/dailybible.svg'
 import { ReactComponent as DailyBibleCenter } from '@web/public/images/dailybiblecenter.svg';
 import { ReactComponent as DailyBibleBottom } from '@web/public/images/dailybiblebottom.svg';
 import { ReactComponent as Bible } from '@web/public/images/bible.svg';
-import { useRouter } from 'next/router';
 
 export const DailyBibleView: React.FC = () => {
   const router = useRouter();
