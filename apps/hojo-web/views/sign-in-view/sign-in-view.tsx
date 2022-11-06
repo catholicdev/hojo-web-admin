@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { useSetRecoilState } from 'recoil';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 
 import { ReactComponent as Dove } from '@web/public/images/dove.svg';
@@ -49,25 +49,32 @@ export const SignInView: React.FC = () => {
       </Box>
       <Box className="sign-in-body">
         <Box className="sign-in-content">
-          <Typography className="sign-in-title" color="primary">
-            HOJO
-          </Typography>
-          <Typography className="sign-in-description" color="primary">
+          <div className="sign-in-title">HOJO</div>
+          <div className="sign-in-description">
             Hành Trình Nên Thánh.
             <br />
             Cuốn Kinh Thánh 4.0
             <br />
             dành cho các bạn trẻ.
-          </Typography>
+          </div>
           <Box mt="140px">
-            <LoadingButton
+            <Button
               variant="contained"
-              className="btn btn-primary"
+              sx={{
+                borderRadius: '40px',
+                width: '100%',
+                background: 'linear-gradient(90deg, #0762C8 0%, #00C2E4 100%)',
+                fontSize: '16px',
+                fontWeight: 500,
+                lineHeight: '20px',
+                height: '56px',
+                padding: '20px 50px',
+              }}
               size="large"
               onClick={handleLoginGuest}
             >
               Tiếp tục
-            </LoadingButton>
+            </Button>
           </Box>
         </Box>
       </Box>
