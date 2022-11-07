@@ -16,13 +16,12 @@ import { getGuestDailyBible } from "@web/services/user";
 import mutateStorage from "@web/utils/mutate-storage";
 import { dailyBible } from "@web/utils/states/bible";
 
-import { DailyBibleModal } from "./modal/daily-bible.modal";
+import DailyBibleModal from "./modal/daily-bible.modal";
 
 export const DailyBibleView: React.FC = () => {
   const router = useRouter();
 
   const setBibleSentence = useSetRecoilState(dailyBible);
-
   const [openModal, setOpenModal] = React.useState<boolean>(false);
 
   const handleGetDailyBile = async () => {
@@ -89,7 +88,7 @@ export const DailyBibleView: React.FC = () => {
         </div>
       </Box>
 
-      <DailyBibleModal openModal={openModal} handleClose={handleCloseModal} />
+      <DailyBibleModal open={openModal} handleClose={handleCloseModal} />
     </>
   );
 };

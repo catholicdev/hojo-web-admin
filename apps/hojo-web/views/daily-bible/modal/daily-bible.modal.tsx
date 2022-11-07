@@ -6,17 +6,16 @@ import { Modal } from "@mui/material";
 import { dailyBible } from "@web/utils/states/bible";
 
 interface DailyBibleInterface {
-  openModal: boolean;
+  open: boolean;
   handleClose: () => void;
 }
 
-export const DailyBibleModal: React.FC = (props: DailyBibleInterface) => {
-  const { openModal, handleClose } = props;
+export default function DailyBibleModal({ open, handleClose }: DailyBibleInterface) {
   const bibleSentence = useRecoilValue(dailyBible);
 
   return (
     <Modal
-      open={openModal}
+      open={open}
       onClose={handleClose}
       sx={{
         width: "100%",
@@ -36,4 +35,4 @@ export const DailyBibleModal: React.FC = (props: DailyBibleInterface) => {
       </div>
     </Modal>
   );
-};
+}
