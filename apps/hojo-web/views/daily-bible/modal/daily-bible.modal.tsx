@@ -29,8 +29,16 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleInterfa
       }}>
       <div
         className="modal-background"
-        style={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: "no-repeat", maxWidth: "400px" }}>
-        <IconButton className="modal-button-close" size="large" onClick={(e) => handleClose(e, null)}>
+        style={{
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundRepeat: "no-repeat",
+          maxWidth: "400px",
+          position: "relative",
+        }}>
+        <IconButton
+          sx={{ position: "absolute", top: "20px", right: "20px" }}
+          size="large"
+          onClick={(e) => handleClose(e, null)}>
           <CloseIcon fontSize="inherit" />
         </IconButton>
         <div className="modal-daily-bible">

@@ -114,13 +114,11 @@
 }
 
 .modal-background {
-    position: relative;
+  
 }
 
 .modal-button-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+   
 }
 
 .modal-btn-share {
