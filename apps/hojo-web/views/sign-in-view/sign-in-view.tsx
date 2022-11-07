@@ -1,13 +1,15 @@
-import * as React from 'react';
-import { useRouter } from 'next/router';
-import { useSetRecoilState } from 'recoil';
-import { Box, Button, Typography } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
+import { useRouter } from "next/router";
 
-import { ReactComponent as Dove } from '@web/public/images/dove.svg';
-import { loginGuest, reloginGuest } from '@web/services/auth';
-import { authGuestState } from '@web/utils/states/auth';
-import mutateStorage from '@web/utils/mutate-storage';
+import { ReactComponent as Dove } from "@web/public/images/dove.svg";
+import * as React from "react";
+import { useSetRecoilState } from "recoil";
+
+import { Box, Button } from "@mui/material";
+
+import { loginGuest, reloginGuest } from "@web/services/auth";
+
+import mutateStorage from "@web/utils/mutate-storage";
+import { authGuestState } from "@web/utils/states/auth";
 
 export const SignInView: React.FC = () => {
   const setGuestAuth = useSetRecoilState(authGuestState);
@@ -19,8 +21,6 @@ export const SignInView: React.FC = () => {
       const appId = mutateStorage.guestAppId;
       let res: any;
 
-      console.log(guestId);
-
       if (guestId) {
         res = await reloginGuest({ userId: guestId, appId: appId });
       } else {
@@ -29,19 +29,14 @@ export const SignInView: React.FC = () => {
 
       setGuestAuth({ userId: guestId, appId: appId, ...res });
 
-      router.push('/');
+      router.push("/");
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      className="sign-in"
-    >
+    <Box display="flex" flexDirection="column" alignItems="center" className="sign-in">
       <Box className="sign-in-head">
         <Box className="logo">
           <Dove />
@@ -61,18 +56,17 @@ export const SignInView: React.FC = () => {
             <Button
               variant="contained"
               sx={{
-                borderRadius: '40px',
-                width: '100%',
-                background: 'linear-gradient(90deg, #0762C8 0%, #00C2E4 100%)',
-                fontSize: '16px',
+                borderRadius: "40px",
+                width: "100%",
+                background: "linear-gradient(90deg, #0762C8 0%, #00C2E4 100%)",
+                fontSize: "16px",
                 fontWeight: 500,
-                lineHeight: '20px',
-                height: '56px',
-                padding: '20px 50px',
+                lineHeight: "20px",
+                height: "56px",
+                padding: "20px 50px",
               }}
               size="large"
-              onClick={handleLoginGuest}
-            >
+              onClick={handleLoginGuest}>
               Tiếp tục
             </Button>
           </Box>

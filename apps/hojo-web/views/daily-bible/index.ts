@@ -1,1 +1,1 @@
-export { DailyBibleView } from './daily-bible-view';
+export { DailyBibleView } from "./daily-bible-view";

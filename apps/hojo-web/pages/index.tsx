@@ -1,13 +1,14 @@
-import { useRouter } from 'next/router';
-import { Avatar, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { useRouter } from "next/router";
 
-import styles from './index.module.css';
+import { ReactComponent as Function1 } from "@web/public/images/function1.svg";
+import { ReactComponent as Function2 } from "@web/public/images/function2.svg";
+import { ReactComponent as Function3 } from "@web/public/images/function3.svg";
+import { ReactComponent as Function4 } from "@web/public/images/function4.svg";
 
-import { ReactComponent as Function1 } from '@web/public/images/function1.svg';
-import { ReactComponent as Function2 } from '@web/public/images/function2.svg';
-import { ReactComponent as Function3 } from '@web/public/images/function3.svg';
-import { ReactComponent as Function4 } from '@web/public/images/function4.svg';
+import { Avatar, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+
+import styles from "./index.module.css";
 
 export function Index() {
   const router = useRouter();
@@ -37,10 +38,7 @@ export function Index() {
             Kinh Thánh
           </Box>
         </Box>
-        <Box
-          className={styles.homeFunctionBox}
-          onClick={() => handleClickFunction('/daily-bible')}
-        >
+        <Box className={styles.homeFunctionBox} onClick={() => handleClickFunction("/daily-bible")}>
           <Box className={styles.homeFunctionBoxImage}>
             <Function2 />
           </Box>
