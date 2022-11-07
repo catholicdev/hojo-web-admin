@@ -8,7 +8,7 @@ import { dailyBible, dailyBibleBackGround } from "@web/utils/states/bible";
 
 interface DailyBibleInterface {
   open: boolean;
-  handleClose: (e: Event, reason: string) => void;
+  handleClose: (e: any, reason?: string) => void;
 }
 
 export default function DailyBibleModal({ open, handleClose }: DailyBibleInterface) {
@@ -19,7 +19,7 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleInterfa
     <Modal
       disableAutoFocus
       open={open}
-      onClose={handleClose}
+      onClose={(e, reason) => handleClose(e, reason)}
       sx={{
         width: "100%",
         display: "flex",
@@ -30,7 +30,7 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleInterfa
       <div
         className="modal-background"
         style={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: "no-repeat", maxWidth: "400px" }}>
-        <IconButton className="modal-button-close" size="large" onClick={handleClose}>
+        <IconButton className="modal-button-close" size="large" onClick={(e) => handleClose(e, null)}>
           <CloseIcon fontSize="inherit" />
         </IconButton>
         <div className="modal-daily-bible">

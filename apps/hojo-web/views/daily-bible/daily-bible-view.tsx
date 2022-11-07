@@ -59,7 +59,7 @@ export const DailyBibleView: React.FC = () => {
     router.push("/");
   };
 
-  const handleCloseModal = (e: Event, reason: string) => {
+  const handleCloseModal = (e: any, reason?: string) => {
     if (reason && reason == "backdropClick") return;
     setOpenModal(!openModal);
   };
