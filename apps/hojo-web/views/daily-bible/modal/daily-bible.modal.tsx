@@ -8,7 +8,7 @@ import { dailyBible, dailyBibleBackGround } from "@web/utils/states/bible";
 
 interface DailyBibleInterface {
   open: boolean;
-  handleClose: () => void;
+  handleClose: (e: Event, reason: string) => void;
 }
 
 export default function DailyBibleModal({ open, handleClose }: DailyBibleInterface) {
