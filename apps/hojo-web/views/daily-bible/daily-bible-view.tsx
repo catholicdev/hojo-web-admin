@@ -5,8 +5,9 @@ import { ReactComponent as Bible } from "@web/public/images/bible.svg";
 import { ReactComponent as DailyBible } from "@web/public/images/dailybible.svg";
 import { ReactComponent as DailyBibleBottom } from "@web/public/images/dailybiblebottom.svg";
 import { ReactComponent as DailyBibleCenter } from "@web/public/images/dailybiblecenter.svg";
+import random from "random";
 import * as React from "react";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Box, IconButton } from "@mui/material";
@@ -14,14 +15,19 @@ import { Box, IconButton } from "@mui/material";
 import { getGuestDailyBible } from "@web/services/user";
 
 import mutateStorage from "@web/utils/mutate-storage";
-import { dailyBible } from "@web/utils/states/bible";
+import { dailyBible, dailyBibleBackGround } from "@web/utils/states/bible";
+
+import firebase from "@web/config/db/scFirebase";
 
 import DailyBibleModal from "./modal/daily-bible.modal";
 
 export const DailyBibleView: React.FC = () => {
   const router = useRouter();
+  const storage = firebase.storage();
 
   const setBibleSentence = useSetRecoilState(dailyBible);
+  const [background, setBackground] = useRecoilState(dailyBibleBackGround);
+
   const [openModal, setOpenModal] = React.useState<boolean>(false);
 
   const handleGetDailyBile = async () => {
@@ -31,6 +37,15 @@ export const DailyBibleView: React.FC = () => {
 
       if (guestId) {
         res = await getGuestDailyBible();
+      }
+
+      if (!background) {
+        const newNumber = random.int(1, 14).toString().padStart(2, "0");
+        const imageRef = storage.ref("images/daily-background").child(`nen-boc-loi-Chua-${newNumber}.svg`);
+
+        imageRef.getDownloadURL().then((imageUrl) => {
+          setBackground(imageUrl);
+        });
       }
 
       setBibleSentence(res);
@@ -44,7 +59,8 @@ export const DailyBibleView: React.FC = () => {
     router.push("/");
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (e: Event, reason: string) => {
+    if (reason && reason == "backdropClick") return;
     setOpenModal(!openModal);
   };
 

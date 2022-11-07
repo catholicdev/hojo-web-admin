@@ -97,12 +97,12 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: antiquewhite;
+    color: white;
 }
 
 .sentence {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
@@ -113,6 +113,23 @@
     font-weight: 500;
 }
 
-.modal-background::after {
-    content: '';
+.modal-background {
+    position: relative;
+}
+
+.modal-button-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal-btn-share {
+    position: absolute;
+    bottom: -100px;
+    width: 50%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
