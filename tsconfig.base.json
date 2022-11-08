@@ -17,7 +17,8 @@
     "paths": {
       "@theme": ["libs/theme/src/index.ts"],
       "@web/*": ["apps/hojo-web/*"]
-    }
+    },
+    "typeRoots": ["node_modules/@types", "apps/hojo-web/types"]
   },
   "exclude": ["node_modules", "tmp"]
 }

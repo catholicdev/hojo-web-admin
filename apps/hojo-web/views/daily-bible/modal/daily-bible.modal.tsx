@@ -6,12 +6,12 @@ import { Button, IconButton, Modal } from "@mui/material";
 
 import { dailyBible, dailyBibleBackGround } from "@web/utils/states/bible";
 
-interface DailyBibleInterface {
+type DailyBibleType = {
   open: boolean;
   handleClose: (e: any, reason?: string) => void;
-}
+};
 
-export default function DailyBibleModal({ open, handleClose }: DailyBibleInterface) {
+export default function DailyBibleModal({ open, handleClose }: DailyBibleType) {
   const bibleSentence = useRecoilValue(dailyBible);
   const backgroundUrl = useRecoilValue(dailyBibleBackGround);
 
