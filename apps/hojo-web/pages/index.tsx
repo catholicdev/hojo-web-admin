@@ -30,7 +30,7 @@ export function Index() {
           <Box className={styles.homeFunctionBoxImage}>
             <Function1 />
           </Box>
-          <Box className={styles.homeFunctionBoxContent}>
+          <Box className={styles.homeFunctionBoxContent} onClick={() => handleClickFunction("/game")}>
             Game
             <br />
             Hành Trình

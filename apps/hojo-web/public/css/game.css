@@ -1,0 +1,51 @@
+.game-home {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 1;
+}
+
+.game-header {
+    background: linear-gradient(90deg, #00C2E4  0%, #0762C8 100%);
+}
+
+.header-right .header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-left .header-icon {
+    padding-top: 4px;
+}
+
+.header-avatar {
+    position: absolute;
+    top: 5vh;
+    overflow: visible;
+}
+
+.header-avatar::after {
+    position: absolute;
+    content: "";
+    height: 102px;
+    width: 102px;
+    top: -6px;
+    left: -6px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #039CD9  0%, #0487D3 100%);
+    z-index: -1;
+}
+
+.game-home-body {
+    height: 90vh;
+}
+
+/* FOOTER */
+.game-footer {
+    background: linear-gradient(90deg, #0762C8 0%, #00C2E4 100%);
+    position: absolute;
+    bottom: 0;
+}

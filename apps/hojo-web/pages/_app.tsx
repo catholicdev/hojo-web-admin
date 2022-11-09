@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 
 import { theme } from "@theme";
 import "@web/public/css/daily-bible.css";
+import "@web/public/css/game.css";
 import "@web/public/css/sign-in.css";
 import { RecoilRoot } from "recoil";
 
