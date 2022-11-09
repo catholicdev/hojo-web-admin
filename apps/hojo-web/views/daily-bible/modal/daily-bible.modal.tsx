@@ -15,6 +15,10 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleType) {
   const bibleSentence = useRecoilValue(dailyBible);
   const backgroundUrl = useRecoilValue(dailyBibleBackGround);
 
+  const handleDownloadDailyBible = () => {
+    console.log("download");
+  };
+
   return (
     <Modal
       disableAutoFocus
@@ -34,6 +38,7 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleType) {
           backgroundRepeat: "no-repeat",
           maxWidth: "400px",
           position: "relative",
+          borderRadius: "2rem",
         }}>
         <IconButton
           sx={{ position: "absolute", top: "20px", right: "20px" }}
@@ -58,10 +63,11 @@ export default function DailyBibleModal({ open, handleClose }: DailyBibleType) {
               fontWeight: 500,
               lineHeight: "20px",
               height: "56px",
-              padding: "20px 50px",
+              padding: "20px 30px",
             }}
-            size="large">
-            Chia sẻ
+            size="large"
+            onClick={handleDownloadDailyBible}>
+            Tải xuống
           </Button>
         </div>
       </div>
