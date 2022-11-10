@@ -32,7 +32,7 @@ export const GameView: React.FC = () => {
           container
           item
           xs={12}
-          justifyContent="space-around"
+          justifyContent="center"
           alignContent="center"
           flexDirection="column"
           className="body-round">

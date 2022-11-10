@@ -4,7 +4,6 @@
     overflow: hidden;
     position: relative;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    z-index: 1;
 }
 
 .game-header {
@@ -40,7 +39,11 @@
 }
 
 .game-home-body {
-    height: 90vh;
+    height: 80vh;
+}
+
+.game-body {
+    margin-top: 0 !important;
 }
 
 .header-setting-icon:hover {
@@ -84,8 +87,8 @@
     background: #00C2E4;
     border-radius: 22px;
     color: white;
-    padding: 1rem;
-    margin: 1.2rem 0px;
+    padding: 16px;
+    margin: 1.2rem 0px !important;
     cursor: pointer;
 }
 
