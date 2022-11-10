@@ -243,3 +243,102 @@
 .round-item:hover {
    color: wheat;
 }
+
+/* GAME MAP */
+.map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map .round-step {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #9A2FE3;
+
+    border: 10px solid #F4BCA3;
+    box-shadow: 0px 5px 10px 4px #585858;
+    position: absolute;
+}
+
+.round-step .round-step-name {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2rem;
+    margin-top: 5px;
+}
+
+/* .round-step .round-step-star {
+    display: flex;
+} */
+
+.round-step-star .first-star svg,
+.round-step-star .second-star svg,
+.round-step-star .third-star svg {
+    color: #BCBEC0;
+}
+
+
+.round-step-star .first-star__fill svg,
+.round-step-star .second-star__fill svg,
+.round-step-star .third-star__fill svg {
+    color: #F8DA63;
+}
+
+.round-step-star .first-star,
+.round-step-star .first-star__fill {
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+}
+
+.round-step-star .third-star,
+.round-step-star .third-star__fill  {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+}
+
+.round-step-star .second-star,
+.round-step-star .second-star__fill {
+    position: absolute;
+       
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.map .round-step-locked {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #3C3C3C;
+
+    border: 10px solid #919191;
+    box-shadow: 0px 5px 10px 4px #585858;
+    position: relative;
+}
+
+.round-step-locked-icon {
+    color: #9A9A9A;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.clickable_stage {
+    z-index: 2;
+    position: absolute;
+    bottom: 100px;
+    
+    left: 47%;
+    transform: translate(-50%, 50%);
+}

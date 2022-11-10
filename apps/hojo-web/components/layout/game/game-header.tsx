@@ -1,9 +1,12 @@
+import { useRouter } from "next/router";
+
 import { ReactComponent as Gold } from "@web/public/images/gold.svg";
 import React from "react";
 
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Grid, IconButton, Typography } from "@mui/material";
 
 type HeaderType = {
   userHeart: number;
@@ -12,8 +15,14 @@ type HeaderType = {
 };
 
 export const GameHeaderLayout: React.FC = ({ userHeart, totalReward, isHomePage }: HeaderType) => {
+  const router = useRouter();
+
   const handleSetting = () => {
     console.log(1);
+  };
+
+  const handleBack = () => {
+    router.push("/");
   };
 
   return (
@@ -26,10 +35,19 @@ export const GameHeaderLayout: React.FC = ({ userHeart, totalReward, isHomePage 
       justifyContent="center"
       color={"#fff"}>
       <Grid container item xs={6} className="header-left" spacing={1} justifyContent="center" alignContent="center">
-        <Grid item paddingTop="4px !important">
+        <Grid container item xs={5} justifyContent="center" alignContent="center" paddingTop="4px !important">
+          <Grid item xs={12} className="header-setting-icon">
+            <ArrowBackIosNewIcon
+              fontSize="medium"
+              sx={{ cursor: "pointer", marginLeft: "20px" }}
+              onClick={handleBack}
+            />
+          </Grid>
+        </Grid>
+        <Grid item paddingTop="4px !important" xs={2}>
           <FavoriteIcon fontSize="large" sx={{ color: "#F16061" }} />
         </Grid>
-        <Grid item>
+        <Grid item xs={5}>
           <Typography fontSize="1.2rem">{userHeart ?? 5}</Typography>
         </Grid>
       </Grid>
@@ -40,7 +58,7 @@ export const GameHeaderLayout: React.FC = ({ userHeart, totalReward, isHomePage 
           </div>
         </Grid>
         <Grid item xs={4}>
-          <Typography fontSize="1.2rem">{totalReward ?? 1000}</Typography>
+          <Typography fontSize="1.2rem">{totalReward ?? "0000"}</Typography>
         </Grid>
         <Grid container item xs={2} justifyContent="flex-end" alignContent="center" className="header-setting-icon">
           <SettingsIcon fontSize="medium" sx={{ zIndex: 1, cursor: "pointer" }} onClick={handleSetting} />
