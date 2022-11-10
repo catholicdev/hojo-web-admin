@@ -42,12 +42,8 @@ export const GameHeaderLayout: React.FC = ({ userHeart, totalReward, isHomePage 
         <Grid item xs={4}>
           <Typography fontSize="1.2rem">{totalReward ?? 1000}</Typography>
         </Grid>
-        <Grid container item xs={2} justifyContent="flex-end" alignContent="center">
-          <SettingsIcon
-            fontSize="medium"
-            sx={{ color: "white", zIndex: 1, cursor: "pointer" }}
-            onClick={handleSetting}
-          />
+        <Grid container item xs={2} justifyContent="flex-end" alignContent="center" className="header-setting-icon">
+          <SettingsIcon fontSize="medium" sx={{ zIndex: 1, cursor: "pointer" }} onClick={handleSetting} />
         </Grid>
       </Grid>
 
