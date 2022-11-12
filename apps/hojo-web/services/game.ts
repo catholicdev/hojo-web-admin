@@ -17,3 +17,22 @@ export const getRounds = async (): Promise<IRound> => {
     throw handleAPIError(err);
   }
 };
+
+export const getUserStages = async (roundId: string): Promise<{ stages: Array<IUserStage> }> => {
+  try {
+    const { data: userStages } = await request<{ stages: Array<IUserStage> }, string>(
+      `/game/guest/${roundId}/user-stages`,
+      {
+        method: "GET",
+      }
+    );
+
+    if (userStages) {
+      return userStages;
+    }
+
+    return null;
+  } catch (err) {
+    throw handleAPIError(err);
+  }
+};

@@ -276,6 +276,14 @@
     display: flex;
 } */
 
+.round-step-image-star {
+    position: absolute;
+    
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
 .round-step-star .first-star svg,
 .round-step-star .second-star svg,
 .round-step-star .third-star svg {
@@ -334,11 +342,18 @@
     justify-content: center;
 }
 
-.clickable_stage {
-    z-index: 2;
+.stage__center {
     position: absolute;
-    bottom: 100px;
-    
-    left: 47%;
+    left: 30%;
     transform: translate(-50%, 50%);
+}
+
+.stage__left {
+    position: absolute;
+    left: 0;
+}
+
+.stage__right {
+    position: absolute;
+    right: 0;
 }

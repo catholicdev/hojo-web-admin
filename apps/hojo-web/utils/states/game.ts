@@ -4,3 +4,8 @@ export const rounds = atom<IRound>({
   key: "rounds",
   default: undefined,
 });
+
+export const userStages = atom<Array<IUserStage>>({
+  key: "userStages",
+  default: undefined,
+});

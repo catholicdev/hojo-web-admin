@@ -40,7 +40,7 @@ export const DailyBibleView: React.FC = () => {
       }
 
       if (!background) {
-        const newNumber = random.int(1, 14).toString().padStart(2, "0");
+        const newNumber = random.int(1, 11).toString().padStart(2, "0");
         const imageRef = storage.ref("images/daily-background").child(`nen-boc-loi-Chua-${newNumber}.png`);
 
         imageRef.getDownloadURL().then((imageUrl) => {
