@@ -24,3 +24,9 @@ interface IUserStage {
   currentGames: Array<ICurrentGame>;
   stageSetting: IStageSetting;
 }
+
+interface IStage {
+  id: string;
+  name: string;
+  detail: string;
+}

@@ -9,3 +9,8 @@ export const userStages = atom<Array<IUserStage>>({
   key: "userStages",
   default: undefined,
 });
+
+export const selectedStage = atom<IStage>({
+  key: "selectedStage",
+  default: undefined,
+});
