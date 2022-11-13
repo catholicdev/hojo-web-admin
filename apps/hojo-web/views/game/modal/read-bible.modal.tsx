@@ -43,7 +43,7 @@ export default function ReadBibleModal({ open, handleClose }: ReadBibleType) {
           container
           item
           xs={12}
-          rowGap={5}
+          rowGap={4}
           className="modal-book-summary"
           justifyContent="center"
           alignItems="center">
