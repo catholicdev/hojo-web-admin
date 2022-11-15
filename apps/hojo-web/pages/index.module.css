@@ -82,8 +82,8 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .homeFunction > .homeFunctionBox {
-        height: 140px;
+    .homeFunctionBox {
+        height: 135px;
     }
   }
   
