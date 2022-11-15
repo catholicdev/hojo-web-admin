@@ -43,7 +43,7 @@ export const SignInView: React.FC = () => {
         </Box>
       </Box>
       <Box className="sign-in-body" height={{ xs: "60%", md: "50%" }}>
-        <Box className="sign-in-content" top={{ xs: "300px", lg: "320px" }}>
+        <Box className="sign-in-content" top={{ xs: "230px", lg: "320px" }}>
           <Box className="sign-in-title" mt={{ xs: "70px", lg: "80px" }}>
             HOJO
           </Box>
