@@ -26,11 +26,11 @@ export function Index() {
         <Typography className={styles.homeWelcome}>Chúa ở cùng bạn</Typography>
       </div>
       <div className={styles.homeFunction}>
-        <Box className={styles.homeFunctionBox}>
+        <Box className={styles.homeFunctionBox} onClick={() => handleClickFunction("/game")}>
           <Box className={styles.homeFunctionBoxImage}>
             <Function1 />
           </Box>
-          <Box className={styles.homeFunctionBoxContent} onClick={() => handleClickFunction("/game")}>
+          <Box className={styles.homeFunctionBoxContent}>
             Game
             <br />
             Hành Trình
