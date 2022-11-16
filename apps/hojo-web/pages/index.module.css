@@ -1,116 +1,116 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .homeUser {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 20vh;
 }
 
 .homeAvatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .homeWelcome {
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 25px;
-    text-align: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 25px;
+  text-align: center;
 }
 
 .homeFunction {
-    width: 100%;
-    padding: 30px;
-    height: 80vh;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .homeFunctionBox {
-    background: #FFFFFF;
-    border-radius: 24px;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-    width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.homeFunctionBox:hover{
-    /* Soft Shadow Thư mục */
-    box-shadow: 0px 24px 24px 24px rgba(211, 211, 211, 0.15);
+.homeFunctionBox:hover {
+  /* Soft Shadow Thư mục */
+  box-shadow: 0px 24px 24px 24px rgba(211, 211, 211, 0.15);
 }
 
 .homeFunctionBoxContent {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 30px;
-    color: #043B78;
-    text-align: center;
-    flex: 0 0 55%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: #043b78;
+  text-align: center;
+  flex: 0 0 55%;
 }
 
 .homeFunctionBoxImage {
-    height: 100%;
-    flex: 0 0 45%;
-    background-color: #00C2E4;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+  height: 100%;
+  flex: 0 0 45%;
+  background-color: #00c2e4;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .homeFunctionBox {
-        height: 135px;
-    }
+  .homeFunctionBox {
+    height: 135px;
   }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    .homeFunctionBox {
-      height: 140px;
-    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .homeFunctionBox {
+    height: 140px;
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    .homeFunctionBox {
-      height: 140px;
-    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .homeFunctionBox {
+    height: 140px;
   }
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    .homeFunctionBox {
-      height: 150px;
-    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .homeFunctionBox {
+    height: 150px;
   }
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    .homeFunctionBox {
-      height: 160px;
-    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .homeFunctionBox {
+    height: 160px;
   }
+}
