@@ -6,19 +6,12 @@
 }
 
 .sign-in-title {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 56px;
-  color: #0851a4;
+  color: var(--primary-color);
 }
 
 .sign-in-description {
-  font-weight: 400;
-  font-size: 1.2rem;
   text-align: center;
-  margin-top: 70px;
-  color: #0851a4;
+  color: var(--primary-color);
 }
 
 .btn-primary {
@@ -55,13 +48,10 @@
 }
 
 .sign-in-content {
-  background-color: #ffc107;
-  border-radius: 50%;
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--gold-color);
+  border-top-left-radius: 80%;
+  border-top-right-radius: 80%;
+  width: 700px;
+  height: 900px;
+  text-align: center;
 }
