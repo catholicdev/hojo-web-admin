@@ -45,6 +45,7 @@ export function Index() {
         alignItems="center"
         paddingLeft={5}
         paddingRight={5}
+        sx={{ width: "100%", marginLeft: 0, marginTop: 0, paddingBottom: "50px" }}
         className={styles.homeFunction}>
         <Grid item xs={12} onClick={() => handleClickFunction("/game")} className={styles.homeFunctionBox}>
           <Box className={styles.homeFunctionBoxImage} sx={{ backgroundColor: "#00c2e4" }}>
