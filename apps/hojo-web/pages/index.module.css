@@ -31,18 +31,14 @@
 
 .homeFunction {
   width: 100%;
-  padding: 30px;
-  height: 80vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  margin-left: 0;
+  margin-top: 0;
+  padding-bottom: 50px;
 }
 
-.homeFunctionBox {
-  background: #ffffff;
-  border-radius: 24px;
+.homeFunction .homeFunctionBox {
+  background: var(--white-color);
+  border-radius: 25px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
   width: 100%;
 
@@ -51,9 +47,13 @@
   justify-content: space-around;
   cursor: pointer;
   overflow: hidden;
+
+  padding: 0 !important;
+
+  margin: 1rem 0px;
 }
 
-.homeFunctionBox:hover {
+.homeFunction .homeFunctionBox:hover {
   /* Soft Shadow Thư mục */
   box-shadow: 0px 24px 24px 24px rgba(211, 211, 211, 0.15);
 }
@@ -65,13 +65,13 @@
   line-height: 30px;
   color: #043b78;
   text-align: center;
-  flex: 0 0 55%;
+  flex: 0 0 50%;
 }
 
 .homeFunctionBoxImage {
   height: 100%;
-  flex: 0 0 45%;
-  background-color: #00c2e4;
+  flex: 0 0 50%;
+
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 
@@ -83,34 +83,34 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .homeFunctionBox {
-    height: 135px;
+    height: 160px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .homeFunctionBox {
-    height: 140px;
+    height: 160px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .homeFunctionBox {
-    height: 140px;
+    height: 170px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .homeFunctionBox {
-    height: 150px;
+    height: 180px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .homeFunctionBox {
-    height: 160px;
+    height: 190px;
   }
 }

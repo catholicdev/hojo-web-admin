@@ -5,7 +5,7 @@ import { ReactComponent as Function2 } from "@web/public/images/function2.svg";
 import { ReactComponent as Function3 } from "@web/public/images/function3.svg";
 import { ReactComponent as Function4 } from "@web/public/images/function4.svg";
 
-import { Avatar, Typography } from "@mui/material";
+import { Avatar, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 import styles from "./index.module.css";
@@ -18,16 +18,36 @@ export function Index() {
   };
 
   return (
-    <div className={styles.page}>
-      <div className={styles.homeUser}>
-        <div className={styles.homeAvatar}>
+    <div className="flex_column">
+      <Grid
+        container
+        spacing={1}
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        padding={5}>
+        <Grid item xs={12}>
           <Avatar sx={{ width: 100, height: 100 }} />
-        </div>
-        <Typography className={styles.homeWelcome}>Chúa ở cùng bạn</Typography>
-      </div>
-      <div className={styles.homeFunction}>
-        <Box className={styles.homeFunctionBox} onClick={() => handleClickFunction("/game")}>
-          <Box className={styles.homeFunctionBoxImage}>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography fontWeight="400" fontSize="1.4rem">
+            Chúa ở cùng bạn
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        spacing={6}
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
+        alignItems="center"
+        paddingLeft={5}
+        paddingRight={5}
+        className={styles.homeFunction}>
+        <Grid item xs={12} onClick={() => handleClickFunction("/game")} className={styles.homeFunctionBox}>
+          <Box className={styles.homeFunctionBoxImage} sx={{ backgroundColor: "#00c2e4" }}>
             <Function1 />
           </Box>
           <Box className={styles.homeFunctionBoxContent}>
@@ -37,9 +57,10 @@ export function Index() {
             <br />
             Kinh Thánh
           </Box>
-        </Box>
-        <Box className={styles.homeFunctionBox} onClick={() => handleClickFunction("/daily-bible")}>
-          <Box className={styles.homeFunctionBoxImage}>
+        </Grid>
+
+        <Grid item xs={12} onClick={() => handleClickFunction("/daily-bible")} className={styles.homeFunctionBox}>
+          <Box className={styles.homeFunctionBoxImage} sx={{ backgroundColor: "#0762C8" }}>
             <Function2 />
           </Box>
           <Box className={styles.homeFunctionBoxContent}>
@@ -49,9 +70,10 @@ export function Index() {
             <br />
             mỗi ngày
           </Box>
-        </Box>
-        <Box className={styles.homeFunctionBox}>
-          <Box className={styles.homeFunctionBoxImage}>
+        </Grid>
+
+        <Grid item xs={12} className={styles.homeFunctionBox}>
+          <Box className={styles.homeFunctionBoxImage} sx={{ backgroundColor: "#FFC107" }}>
             <Function3 />
           </Box>
           <Box className={styles.homeFunctionBoxContent}>
@@ -59,9 +81,10 @@ export function Index() {
             <br />
             bác ái
           </Box>
-        </Box>
-        <Box className={styles.homeFunctionBox}>
-          <Box className={styles.homeFunctionBoxImage}>
+        </Grid>
+
+        <Grid item xs={12} className={styles.homeFunctionBox}>
+          <Box className={styles.homeFunctionBoxImage} sx={{ backgroundColor: "#FF7B02" }}>
             <Function4 />
           </Box>
           <Box className={styles.homeFunctionBoxContent}>
@@ -71,8 +94,8 @@ export function Index() {
             <br />
             cho bạn
           </Box>
-        </Box>
-      </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }
