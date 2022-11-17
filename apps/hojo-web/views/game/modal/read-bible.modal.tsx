@@ -48,7 +48,7 @@ export default function ReadBibleModal({ open, handleClose }: ReadBibleType) {
           justifyContent="center"
           alignItems="center">
           <Grid item xs={12}>
-            {stage?.detail}
+            <Typography fontSize="14px">{stage?.detail}</Typography>
           </Grid>
 
           <Grid container item xs={12} spacing={1} justifyContent="center" alignItems="center">

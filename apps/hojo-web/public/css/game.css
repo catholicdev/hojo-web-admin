@@ -361,12 +361,12 @@
 
 /* MODAL READ BIBLE */
 .modal-body {
-  max-width: 400px;
+  max-width: 380px;
   padding: 10px;
   background-color: var(--white-color);
   border-radius: 25px;
   position: relative;
-  margin: auto;
+  margin: auto !important;
 }
 
 .modal-body .modal-book-name {
