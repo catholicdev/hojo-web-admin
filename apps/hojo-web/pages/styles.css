@@ -401,6 +401,11 @@ summary svg {
   .container {
     max-width: 100%;
   }
+
+  .sign-in-content {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
