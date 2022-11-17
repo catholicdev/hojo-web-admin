@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { ReactComponent as MapCuuUoc } from "@web/public/images/MapCuuUoc.svg";
