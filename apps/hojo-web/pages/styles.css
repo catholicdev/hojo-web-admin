@@ -406,6 +406,10 @@ summary svg {
     width: 600px;
     height: 600px;
   }
+
+  .modal-body {
+    max-width: 340px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
