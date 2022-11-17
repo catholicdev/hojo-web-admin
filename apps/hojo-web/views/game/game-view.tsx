@@ -63,7 +63,8 @@ export const GameView: React.FC = () => {
           justifyContent="center"
           alignContent="center"
           flexDirection="column"
-          className="body-round">
+          className="body-round"
+          mt={5}>
           <Grid
             container
             item

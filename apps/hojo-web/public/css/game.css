@@ -1,13 +1,16 @@
 .game-home {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
 }
 
 .game-header {
   background: linear-gradient(90deg, #00c2e4 0%, #0762c8 100%);
+  color: var(--white-color);
 }
 
 .header-right .header-icon {
@@ -39,7 +42,7 @@
 }
 
 .game-home-body {
-  height: 80vh;
+  height: 100%;
 }
 
 .game-body {
@@ -53,8 +56,7 @@
 /* FOOTER */
 .game-footer {
   background: linear-gradient(90deg, #0762c8 0%, #00c2e4 100%);
-  position: absolute;
-  bottom: 0;
+  position: relative;
 }
 
 .footer-left::after {
@@ -86,15 +88,15 @@
   position: relative;
   background: #00c2e4;
   border-radius: 22px;
-  color: white;
-  padding: 16px;
-  margin: 1.2rem 0px !important;
+  color: var(--white-color);
+  padding: 1.5rem;
+  margin: 2rem 0px !important;
   cursor: pointer;
 }
 
 .round-icon {
   position: absolute;
-  top: -20px;
+  top: -35px;
 }
 
 .body-ranking .ranking-background {
@@ -103,7 +105,7 @@
 
 .ranking-background-item__first {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -150,7 +152,7 @@
 
 .ranking-background-item__second {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 20px;
 }
 
@@ -196,7 +198,7 @@
 
 .ranking-background-item__third {
   position: absolute;
-  top: 45%;
+  top: 35%;
   right: 20px;
 }
 

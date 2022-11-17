@@ -18,7 +18,8 @@ export const GameFooterLayout: React.FC = ({ isHomePage }: FooterType) => {
       height="10vh"
       alignContent="center"
       justifyContent="center"
-      color={"#fff"}>
+      color={"#fff"}
+      mt={5}>
       <Grid container item xs={6} className="footer-left" spacing={1} justifyContent="center" alignContent="center">
         <Grid container item xs={4} paddingTop="4px !important" justifyContent="flex-end" alignContent="center">
           <GroupIcon fontSize="large" />
