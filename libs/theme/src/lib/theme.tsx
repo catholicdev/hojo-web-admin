@@ -1,21 +1,24 @@
-import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { red } from "@mui/material/colors";
+import { createTheme } from "@mui/material/styles";
 
-import { MuiButton } from './components';
+import { MuiButton } from "./components";
 
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#0851A4',
+      main: "#0851A4",
     },
     secondary: {
-      main: '#19857b',
+      main: "#19857b",
     },
     error: {
       main: red.A400,
     },
   },
   components: {
-    MuiButton
-  }
+    MuiButton,
+  },
+  typography: {
+    fontFamily: "Quicksand",
+  },
 });

@@ -1,1 +1,0 @@
-export { ButtonSystem as default } from "@web/views/ui-system"
