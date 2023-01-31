@@ -84,6 +84,6 @@ export const SignInView: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
-    </Box>
+    </Box >
   );
 };

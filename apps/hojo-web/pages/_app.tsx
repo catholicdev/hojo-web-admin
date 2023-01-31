@@ -19,12 +19,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        <Container sx={{ padding: 0 }}>
+        {/* <Container sx={{ padding: 0 }}> */}
           <CssBaseline />
           <RootLayout>
             <Component {...pageProps} />
           </RootLayout>
-        </Container>
+        {/* </Container> */}
       </RecoilRoot>
     </ThemeProvider>
   );
