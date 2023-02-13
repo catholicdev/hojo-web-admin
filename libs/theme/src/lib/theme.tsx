@@ -1,22 +1,16 @@
-import { red } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import { experimental_extendTheme as extendTheme } from "@mui/material/styles";
 
-import { MuiButton } from "./components";
+import { MuiButton, MuiOutlinedInput } from "./components";
+import colorSchema from "./colorScheme";
 
-export const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#0851A4",
-    },
-    secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: red.A400,
-    },
+export const theme = extendTheme({
+  colorSchemes: {
+    dark: colorSchema,
+    light: colorSchema,
   },
   components: {
     MuiButton,
+    MuiOutlinedInput
   },
   typography: {
     fontFamily: "Quicksand",

@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import ButtonSystem from "./button";
+import TextBoxUI from "./text-box";
 
 export const UISystemView: React.FC = () => {
   return (
@@ -8,7 +9,8 @@ export const UISystemView: React.FC = () => {
       <Head>
         <title>UI System</title>
       </Head>
-      <ButtonSystem />;
+      <ButtonSystem />
+      <TextBoxUI />
     </div>
   );
 };

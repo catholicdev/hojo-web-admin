@@ -6,7 +6,7 @@ import "@web/public/css/game.css";
 import "@web/public/css/sign-in.css";
 import { RecoilRoot } from "recoil";
 
-import { ThemeProvider } from "@mui/material";
+import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -17,16 +17,16 @@ import "./styles.css";
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+    <CssVarsProvider theme={theme}>
       <RecoilRoot>
         {/* <Container sx={{ padding: 0 }}> */}
-          <CssBaseline />
-          <RootLayout>
-            <Component {...pageProps} />
-          </RootLayout>
+        <CssBaseline />
+        <RootLayout>
+          <Component {...pageProps} />
+        </RootLayout>
         {/* </Container> */}
       </RecoilRoot>
-    </ThemeProvider>
+    </CssVarsProvider>
   );
 }
 

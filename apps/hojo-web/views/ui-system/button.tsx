@@ -10,14 +10,17 @@ export default function ButtonSystem() {
 
   return (
     <Grid container spacing={3} columnSpacing={2} alignItems={"center"} padding={5}>
+      <Grid xs={12} item>
+        <Typography align="center" variant="h4" fontWeight="bold">Button Primary</Typography>
+      </Grid>
       <Grid item container xs={12} spacing={3}>
         <Grid item xs={6}>
-          <Typography variant="h4" textAlign="center" fontWeight={500}>
+          <Typography variant="h5" textAlign="center" fontWeight={500}>
             Default
           </Typography>
         </Grid>
         <Grid item xs={6}>
-          <Typography variant="h4" textAlign="center" fontWeight={500}>
+          <Typography variant="h5" textAlign="center" fontWeight={500}>
             Disabled
           </Typography>
         </Grid>
