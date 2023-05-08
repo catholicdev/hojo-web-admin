@@ -1,6 +1,5 @@
+import { STATUS } from "@web/configs";
 import { atom } from "recoil";
-
-import { STATUS } from "@web/config";
 
 export const toastState = atom({
   key: "toastStateAtom",
