@@ -1,18 +1,19 @@
-//@ts-check
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { withNx } = require("@nrwl/next/plugins/with-nx");
+/** @type {import('next').NextConfig} */
 
-/**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
- **/
-const nextConfig = {
-  nx: {
-    // Set this to true if you would like to to use SVGR
-    // See: https://github.com/gregberge/svgr
-    svgr: true,
-  },
-  images: { domains: ["firebasestorage.googleapis.com"] },
-};
+// Remove this if you're not using Fullcalendar features
 
-module.exports = withNx(nextConfig);
+module.exports = {
+  trailingSlash: true,
+  reactStrictMode: false,
+  webpack: config => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      apexcharts: path.resolve(__dirname, './node_modules/apexcharts-clevision')
+    }
+
+    return config
+  }
+}
