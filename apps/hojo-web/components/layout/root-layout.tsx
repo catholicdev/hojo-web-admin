@@ -1,23 +1,19 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode } from "react";
 
-import { ToastContainer } from '@web/components/toast';
-import { Protected } from '@web/components/protected';
+import { Protected } from "@web/components/protected";
+import { ToastContainer } from "@web/components/toast";
 
 type RootLayoutProps = { children: ReactNode };
 
-export const RootLayout: FC<RootLayoutProps> = ({
-  children,
-}: RootLayoutProps) => {
+export const RootLayout: FC<RootLayoutProps> = ({ children }: RootLayoutProps) => {
   return (
     <Protected>
-      <main>
-        <div className="wrapper">
-          <div className="container">
-            {children}
-            <ToastContainer />
-          </div>
+      <div className="wrapper">
+        <div className="container">
+          {children}
+          <ToastContainer />
         </div>
-      </main>
+      </div>
     </Protected>
   );
 };

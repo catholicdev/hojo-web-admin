@@ -1,15 +1,14 @@
-import { atom } from 'recoil';
-
-import { STATUS } from '@web/config';
+import { STATUS } from "@web/configs";
+import { atom } from "recoil";
 
 export const toastState = atom({
-  key: 'toastStateAtom',
+  key: "toastStateAtom",
   default: {
     open: false,
-    vertical: 'top',
-    horizontal: 'center',
-    message: '',
-    title: '',
+    vertical: "top",
+    horizontal: "center",
+    message: "",
+    title: "",
     type: STATUS.SUCCESS, //success | warning | info| error
   },
 });

@@ -16,8 +16,15 @@
     "baseUrl": ".",
     "paths": {
       "@theme": ["libs/theme/src/index.ts"],
-      "@web/*": ["apps/hojo-web/*"]
-    }
+      "@web/*": ["apps/hojo-web/*"],
+      "apexcharts": [
+        "./node_modules/apexcharts-clevision"
+      ],
+      "apexcharts/*": [
+        "./node_modules/apexcharts-clevision/*"
+      ]
+    },
+    "typeRoots": ["node_modules/@types", "apps/hojo-web/types"]
   },
   "exclude": ["node_modules", "tmp"]
 }
